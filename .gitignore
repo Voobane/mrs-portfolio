@@ -7,6 +7,8 @@ dist/
 # local environment variables (may contain secrets)
 .env
 .env.*
+.editorconfig
+.prettierrc
 
 # logs
 npm-debug.log*

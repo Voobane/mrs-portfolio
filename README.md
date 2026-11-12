@@ -2,7 +2,7 @@
 
 Personal portfolio for Matt Stammler, Full Stack Developer. It's a single-page app with a light/dark theme, 17 project cards and a contact page.
 
-**Live site:** https://matt-stammler-portfolio.onrender.com
+**Live site:** www.mrsportfolio.com
 
 ## Tech Stack
 
