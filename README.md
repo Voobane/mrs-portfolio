@@ -2,7 +2,7 @@
 
 Personal portfolio for Matt Stammler, Full Stack Developer. It's a single-page app with a light/dark theme, 17 project cards and a contact page.
 
-**Live site:** https://voobane.github.io/<repo-name>/
+**Live site:** https://matt-stammler-portfolio.onrender.com
 
 ## Tech Stack
 
@@ -33,7 +33,6 @@ npm run preview  # preview the production build locally
 ## Project Structure
 
 ```
-├── .github/workflows/deploy.yml   # Builds and deploys to GitHub Pages on push
 ├── public/
 │   └── favicon.svg                # Put resume.pdf here to enable "View CV"
 ├── src/
@@ -62,7 +61,9 @@ npm run preview  # preview the production build locally
 │   ├── index.css                  # Tailwind setup + theme colors
 │   └── main.jsx                   # Entry point
 ├── index.html
+├── LICENSE
 ├── package.json
+├── render.yaml                    # Render static-site settings
 └── vite.config.js
 ```
 
@@ -75,16 +76,16 @@ For a Live Demo link to work, that repository must have GitHub Pages turned on.
 
 Command-line projects can't run on GitHub Pages. For those, add `terminalDemo: '<key>'` to the project and define the session in `src/data/terminalDemos.js`. Its Live Demo button then opens the simulated terminal instead.
 
-## Deploying to GitHub Pages
+## Deploying to Render
 
-The GitHub Actions workflow in `.github/workflows/deploy.yml` builds and publishes the site automatically.
+`render.yaml` tells Render how to build and host the site as a free static site.
 
-1. Push this project to a GitHub repository (on the `main` branch), including the workflow file.
-2. In the repository, go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, choose **GitHub Actions**.
-4. Every push to `main` now rebuilds and deploys the site. The first run starts when you push. You can also start it from the **Actions** tab.
+1. Push this project to the `mrs-portfolio` repository on GitHub.
+2. In the [Render dashboard](https://dashboard.render.com/), choose **New → Blueprint**.
+3. Connect your GitHub account if asked, pick this repository, and click **Apply**.
+4. Render runs `npm install && npm run build` and publishes the `dist` folder. Every push to `main` redeploys automatically.
 
-The site appears at `https://voobane.github.io/<repo-name>/`. If you name the repository `voobane.github.io`, it appears at `https://voobane.github.io/` instead.
+The site appears at `https://matt-stammler-portfolio.onrender.com` (or a similar address if that name is taken). You can add your own domain under the service's **Settings → Custom Domains**.
 
 ## Resume
 
@@ -95,3 +96,7 @@ Add your resume as `public/resume.pdf`, and the **View CV** button will open it.
 - GitHub: [Voobane](https://github.com/Voobane)
 - LinkedIn: [Matt Stammler](https://www.linkedin.com/in/matt-stammler-ab46b83a9)
 - Email: voodoobane07@gmail.com
+
+## License
+
+[MIT](LICENSE)

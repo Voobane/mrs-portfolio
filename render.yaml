@@ -1,0 +1,17 @@
+# Render Blueprint: deploys the portfolio as a free static site.
+# In Render, choose New → Blueprint and pick this repository.
+services:
+  - type: web
+    name: matt-stammler-portfolio
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+    headers:
+      # Vite gives built files unique hashed names, so they can be cached for a year
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
