@@ -1,8 +1,10 @@
+This project is under construction.
+
 # Matt Stammler — Portfolio
 
-Personal portfolio for Matt Stammler, Full Stack Developer. It's a single-page app with a light/dark theme, 17 project cards and a contact page.
+Personal portfolio for Matt Stammler, Full Stack Developer.
 
-**Live site:** www.mrsportfolio.com
+**Live site:** 'www.mrsportfolio.com'
 
 ## Tech Stack
 
@@ -67,25 +69,8 @@ npm run preview  # preview the production build locally
 └── vite.config.js
 ```
 
-To add or edit a project, change `src/data/projects.js`. No component code needs to change. Each project only needs its repository name (`repo`), and the GitHub and Live Demo links are built from it:
-
-- GitHub: `https://github.com/Voobane/<repo>`
-- Live Demo: `https://voobane.github.io/<repo>/`
-
-For a Live Demo link to work, that repository must have GitHub Pages turned on.
-
-Command-line projects can't run on GitHub Pages. For those, add `terminalDemo: '<key>'` to the project and define the session in `src/data/terminalDemos.js`. Its Live Demo button then opens the simulated terminal instead.
-
 ## Deploying to Render
 
-`render.yaml` tells Render how to build and host the site as a free static site.
-
-1. Push this project to the `mrs-portfolio` repository on GitHub.
-2. In the [Render dashboard](https://dashboard.render.com/), choose **New → Blueprint**.
-3. Connect your GitHub account if asked, pick this repository, and click **Apply**.
-4. Render runs `npm install && npm run build` and publishes the `dist` folder. Every push to `main` redeploys automatically.
-
-The site appears at `https://matt-stammler-portfolio.onrender.com` (or a similar address if that name is taken). You can add your own domain under the service's **Settings → Custom Domains**.
 
 ## Resume
 
@@ -95,7 +80,7 @@ Add your resume as `public/resume.pdf`, and the **View CV** button will open it.
 
 - GitHub: [Voobane](https://github.com/Voobane)
 - LinkedIn: [Matt Stammler](https://www.linkedin.com/in/matt-stammler-ab46b83a9)
-- Email: voodoobane07@gmail.com
+- Email: #### tbd onthis ######
 
 ## License
 
