@@ -3,7 +3,7 @@ import { openResume } from '../lib/resume.js'
 import { GitHubIcon, LinkedInIcon } from './icons.jsx'
 
 const socialClass =
-  'inline-flex items-center gap-1.5 font-mono text-xs tracking-[0.06em] text-muted no-underline transition-colors duration-200 hover:text-accent'
+  'inline-flex min-h-11 items-center gap-1.5 font-mono text-xs tracking-[0.06em] text-muted no-underline transition-colors duration-200 hover:text-accent'
 
 export default function Hero({ onNavigate }) {
   return (
@@ -32,7 +32,7 @@ export default function Hero({ onNavigate }) {
         </button>
       </div>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-x-6">
         <a href={profile.github.url} target="_blank" rel="noopener noreferrer" className={socialClass}>
           <GitHubIcon /> GitHub
         </a>

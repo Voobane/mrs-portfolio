@@ -16,7 +16,7 @@ export default function Navbar({ view, onNavigate, theme, onToggleTheme }) {
     <nav className="sticky top-0 z-[100] flex h-[60px] items-center justify-between border-b border-line bg-white/92 px-[clamp(16px,5vw,60px)] backdrop-blur-[20px] dark:bg-[#0d0f1a]/92">
       <button
         onClick={() => onNavigate('main')}
-        className="cursor-pointer font-mono text-base font-bold tracking-[-0.02em] text-fg"
+        className="relative cursor-pointer font-mono text-base font-bold tracking-[-0.02em] text-fg after:absolute after:-inset-2.5 after:content-['']"
         aria-label="Home"
       >
         ms<span className="text-accent">.</span>

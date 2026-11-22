@@ -1,7 +1,9 @@
+// Card buttons: 44px tall on phones (comfortable thumb target), 36px with a mouse
 const linkBase =
-  'inline-flex items-center gap-[5px] font-mono text-[0.72rem] font-bold uppercase tracking-[0.06em] no-underline transition duration-200'
+  'inline-flex min-h-11 items-center justify-center gap-[5px] rounded-md px-4 font-mono text-[0.72rem] font-bold uppercase tracking-[0.06em] no-underline transition duration-200 md:min-h-9'
 
-const demoClass = `${linkBase} cursor-pointer rounded-md bg-accent px-3 py-[5px] text-white hover:-translate-y-px hover:bg-accent-hi`
+const demoClass = `${linkBase} cursor-pointer border border-accent bg-accent text-white hover:-translate-y-px hover:border-accent-hi hover:bg-accent-hi`
+const repoClass = `${linkBase} border border-line text-muted hover:-translate-y-px hover:border-accent hover:text-accent`
 
 export default function ProjectCard({ project, onOpenTerminal }) {
   const { name, emoji, label, description, tech, liveUrl, repoUrl, featured, terminalDemo } = project
@@ -59,7 +61,7 @@ export default function ProjectCard({ project, onOpenTerminal }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${name} source code on GitHub (opens in a new tab)`}
-            className={`${linkBase} text-muted hover:text-accent`}
+            className={repoClass}
           >
             ⌥ GitHub
           </a>

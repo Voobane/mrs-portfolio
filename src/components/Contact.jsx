@@ -32,7 +32,7 @@ function CopyEmail() {
       <span className="min-w-0 flex-1 truncate font-mono text-[0.82rem] text-fg">{profile.email}</span>
       <button
         onClick={copy}
-        className="shrink-0 cursor-pointer whitespace-nowrap rounded-md bg-accent px-3 py-[5px] font-mono text-[0.7rem] font-bold tracking-[0.08em] text-white transition-colors duration-200 hover:bg-accent-hi"
+        className="min-h-11 shrink-0 cursor-pointer whitespace-nowrap rounded-md bg-accent px-4 font-mono md:min-h-8 text-[0.7rem] font-bold tracking-[0.08em] text-white transition-colors duration-200 hover:bg-accent-hi"
       >
         {copied ? 'COPIED!' : 'COPY'}
       </button>

@@ -46,14 +46,14 @@ export default function TerminalModal({ demoKey, open, instance, onClose, onRest
           <div className="flex shrink-0 items-center gap-2.5">
             <button
               onClick={onRestart}
-              className={`${headerButton} inline-flex items-center gap-1.5 rounded-[7px] px-3.5 py-1.5 font-mono text-[0.7rem] font-bold uppercase tracking-[0.06em]`}
+              className={`${headerButton} inline-flex min-h-11 items-center gap-1.5 rounded-[7px] px-3.5 font-mono md:min-h-8 text-[0.7rem] font-bold uppercase tracking-[0.06em]`}
             >
               <RestartIcon /> Restart
             </button>
             <button
               onClick={onClose}
               aria-label="Close demo"
-              className={`${headerButton} flex size-8 items-center justify-center rounded-lg text-base`}
+              className={`${headerButton} flex size-11 items-center justify-center rounded-lg text-base md:size-8`}
             >
               ✕
             </button>

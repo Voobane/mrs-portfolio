@@ -221,7 +221,7 @@ export default function TerminalDemo({ demo }) {
         )}
       </div>
 
-      <div className="flex shrink-0 items-center border-t border-term-bar px-5 py-3">
+      <div className="flex shrink-0 items-center border-t border-term-bar px-5">
         <span className="mr-2 whitespace-nowrap text-[0.82rem] text-term-green">{promptChar}</span>
         <input
           ref={inputRef}
@@ -231,7 +231,7 @@ export default function TerminalDemo({ demo }) {
           disabled={disabled}
           placeholder={disabled ? 'Press Restart to run it again' : 'Type your answer and press Enter…'}
           aria-label="Terminal input"
-          className="min-w-0 flex-1 border-0 bg-transparent font-mono text-[0.82rem] text-[#e8eaff] caret-term-blue outline-none placeholder:text-term-muted"
+          className="min-h-11 min-w-0 flex-1 border-0 bg-transparent font-mono text-[0.82rem] text-[#e8eaff] caret-term-blue outline-none placeholder:text-term-muted"
         />
       </div>
     </div>
