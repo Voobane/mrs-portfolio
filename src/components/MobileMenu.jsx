@@ -9,12 +9,28 @@ const socialClass =
 // tapped, ✕ or Escape is pressed, or the window grows to tablet width.
 export default function MobileMenu({ open, onClose, items, returnFocusRef }) {
   const closeRef = useRef(null)
+  const panelRef = useRef(null)
 
   useEffect(() => {
     if (!open) return undefined
 
     const returnTo = returnFocusRef.current
-    const onKey = (e) => e.key === 'Escape' && onClose()
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key !== 'Tab') return
+
+      // Keep keyboard focus inside the menu while it is open
+      const focusable = panelRef.current.querySelectorAll('button, a[href]')
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
     const desktop = window.matchMedia('(min-width: 768px)')
     const onResize = (e) => e.matches && onClose()
 
@@ -43,7 +59,10 @@ export default function MobileMenu({ open, onClose, items, returnFocusRef }) {
       />
 
       <aside
+        ref={panelRef}
         id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
         aria-label="Site menu"
         className={`fixed inset-y-0 right-0 z-[201] flex w-[min(80vw,320px)] flex-col border-l border-line bg-page px-6 pb-8 shadow-[-24px_0_60px_rgba(0,0,0,0.35)] duration-300 ease-out ${
           // Becomes visible at once when opening (so focus can move into it), and
