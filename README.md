@@ -40,26 +40,31 @@ npm run preview  # preview the production build locally
 ├── src/
 │   ├── components/
 │   │   ├── About.jsx
+│   │   ├── ComingSoonCard.jsx     # Placeholder card for upcoming projects
 │   │   ├── Contact.jsx
 │   │   ├── Experience.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Hero.jsx
+│   │   ├── MobileMenu.jsx         # Slide-out menu on phones
 │   │   ├── Navbar.jsx
 │   │   ├── ProjectCard.jsx
-│   │   ├── Projects.jsx
+│   │   ├── ProjectGrid.jsx        # Grid of project cards
+│   │   ├── Projects.jsx           # Professional + Personal sections on the home page
+│   │   ├── ProjectsPage.jsx       # Full list of one category (/projects/<id>)
 │   │   ├── SectionHeader.jsx
 │   │   ├── ThemeToggle.jsx
 │   │   ├── icons.jsx
 │   │   └── terminal/              # Terminal demo popup for the CLI projects
 │   ├── data/
 │   │   ├── profile.js             # Contact links, skills, experience
-│   │   ├── projects.js            # Project cards and their links
+│   │   ├── projects.js            # Professional and personal projects
 │   │   └── terminalDemos.js       # Scripted sessions for the terminal demos
 │   ├── hooks/useTheme.js          # Light/dark theme state
 │   ├── lib/
 │   │   ├── resume.js              # "View CV" button logic
+│   │   ├── router.jsx             # Page addresses (/contact, /projects/…)
 │   │   └── storage.js             # Safe localStorage helpers
-│   ├── App.jsx                    # Page layout and view switching
+│   ├── App.jsx                    # Pages and navigation
 │   ├── index.css                  # Tailwind setup + theme colors
 │   └── main.jsx                   # Entry point
 ├── index.html

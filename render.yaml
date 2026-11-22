@@ -10,6 +10,11 @@ services:
     envVars:
       - key: NODE_VERSION
         value: "20"
+    # Send every address (such as /projects/personal) to the app, which shows the right page
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     headers:
       # Vite gives built files unique hashed names, so they can be cached for a year
       - path: /assets/*

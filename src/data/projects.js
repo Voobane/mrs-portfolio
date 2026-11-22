@@ -1,11 +1,16 @@
 import { profile } from './profile.js'
 
-// Project cards, in display order. Each project links to its GitHub repository
-// and to its GitHub Pages site (https://<user>.github.io/<repo>/).
-// Set `featured: true` to make a card span the full width of the grid.
+// Project cards, in display order. The home page shows the first 4 of each
+// category; the category's own page (/projects/<id>) shows them all.
+//
+// Each project links to its GitHub repository and to its GitHub Pages site
+// (https://<user>.github.io/<repo>/).
+// Set `featured: true` to make a card span the full width of the grid on the
+// category page.
 // Command-line projects can't run on GitHub Pages, so they set `terminalDemo`
 // (a key from terminalDemos.js) and their Live Demo opens a simulated terminal.
-const projectList = [
+
+const professionalProjects = [
   {
     name: 'MERN Book Search Engine',
     repo: 'C21-MERN-Book-Search-Engine',
@@ -165,8 +170,35 @@ const projectList = [
   },
 ]
 
-export const projects = projectList.map((project) => ({
+// Add personal projects here, in the same format as above. Until there are
+// any, "Coming soon" cards are shown in their place.
+const personalProjects = []
+
+const withLinks = (project) => ({
   ...project,
   repoUrl: `${profile.github.url}/${project.repo}`,
   liveUrl: `${profile.github.pagesUrl}/${project.repo}/`,
-}))
+})
+
+// How many cards each section shows on the home page
+export const HOME_PREVIEW_COUNT = 4
+
+export const projectCategories = [
+  {
+    id: 'professional',
+    sectionId: 'projects',
+    title: 'Professional Projects',
+    description:
+      'Full-stack web applications, APIs and command-line tools built with JavaScript, React, Node.js and SQL and NoSQL databases.',
+    projects: professionalProjects.map(withLinks),
+  },
+  {
+    id: 'personal',
+    sectionId: 'personal-projects',
+    title: 'Personal Projects',
+    description: 'Side projects and experiments I build on my own time.',
+    projects: personalProjects.map(withLinks),
+  },
+]
+
+export const findCategory = (id) => projectCategories.find((category) => category.id === id)
