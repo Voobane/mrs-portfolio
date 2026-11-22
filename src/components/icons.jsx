@@ -22,3 +22,21 @@ export function RestartIcon() {
     </svg>
   )
 }
+
+export function GraduationCapIcon({ size = 18 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 3 1 8.5 12 14l9-4.5V16h2V8.5L12 3Z" />
+      <path d="M5 12.2V16c0 1.9 3.1 3.5 7 3.5s7-1.6 7-3.5v-3.8L12 15.7 5 12.2Z" />
+    </svg>
+  )
+}
+
+export function CertificateIcon({ size = 18 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2a7 7 0 0 0-4 12.74V22l4-2 4 2v-7.26A7 7 0 0 0 12 2Zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z" />
+      <circle cx="12" cy="9" r="2.5" />
+    </svg>
+  )
+}

@@ -16,7 +16,7 @@ const text = 'm-0 text-[0.9rem] leading-[1.6] text-muted'
 export default function About() {
   return (
     <section id="about-section" className="mb-20 scroll-mt-20">
-      <SectionHeader title="About" />
+      <SectionHeader title="About Me" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <BentoCard tag="Profile" title="Full Stack Developer" className="md:row-span-2">
           <p className={text}>

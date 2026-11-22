@@ -2,10 +2,12 @@ import { useCallback, useRef, useState } from 'react'
 import MobileMenu from './MobileMenu.jsx'
 import ThemeToggle from './ThemeToggle.jsx'
 
+// In the same order as the sections on the home page
 const SECTIONS = [
-  { label: 'About', id: 'about' },
-  { label: 'Projects', id: 'projects' },
+  { label: 'About Me', id: 'about-section' },
   { label: 'Experience', id: 'experience' },
+  { label: 'Education', id: 'education' },
+  { label: 'Projects', id: 'projects' },
 ]
 
 const linkClass = (active) =>

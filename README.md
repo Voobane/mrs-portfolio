@@ -42,6 +42,7 @@ npm run preview  # preview the production build locally
 │   │   ├── About.jsx
 │   │   ├── ComingSoonCard.jsx     # Placeholder card for upcoming projects
 │   │   ├── Contact.jsx
+│   │   ├── Education.jsx          # Education cards
 │   │   ├── Experience.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Hero.jsx
@@ -56,6 +57,7 @@ npm run preview  # preview the production build locally
 │   │   ├── icons.jsx
 │   │   └── terminal/              # Terminal demo popup for the CLI projects
 │   ├── data/
+│   │   ├── education.js           # Schools, dates, diplomas and scores
 │   │   ├── profile.js             # Contact links, skills, experience
 │   │   ├── projects.js            # Professional and personal projects
 │   │   └── terminalDemos.js       # Scripted sessions for the terminal demos
