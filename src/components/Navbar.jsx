@@ -48,7 +48,7 @@ export default function Navbar({ view, onNavigate, theme, onToggleTheme }) {
           className="relative cursor-pointer font-mono text-base font-bold tracking-[-0.02em] text-fg after:absolute after:-inset-2.5 after:content-['']"
           aria-label="Home"
         >
-          ms<span className="text-accent">.</span>
+          MS<span className="text-accent">.</span>
         </button>
 
         <ul className="m-0 hidden list-none gap-8 p-0 md:flex">
